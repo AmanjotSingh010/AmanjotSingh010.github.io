@@ -154,9 +154,12 @@ function moveNo() {
 let bgChanged = false;
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0 && !bgChanged) {
-    document.body.style.background =
-      "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("bg2.jpg") no-repeat center center fixed";
+    document.body.style.backgroundImage =
+      "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('bg2.jpg')";
     document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center center";
+    document.body.style.backgroundAttachment = "scroll";
     bgChanged = true;
   }
 });
@@ -164,6 +167,7 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
 
 
